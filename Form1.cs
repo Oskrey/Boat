@@ -54,11 +54,11 @@ namespace Модель_Лотки_Вальтера
             List<double> x3 = new List<double>();
             List<double> y3 = new List<double>();
             x3.Add(x0);
-            y3.Add(y0 - (y0 / 4)-(y0 / 4));
+            y3.Add(y0 - (y0 / 4)*2);
 
             for (int i = 1; i < 150; i++)
             {
-                x3.Add(((ε - α * y3[i - 1]) * x3[i - 1] + x3[i - 1])) ;
+                x3.Add(((ε - α * y3[i - 1]) * x3[i - 1] + x3[i - 1]));
                 y3.Add(((δ * x3[i] - β) * y3[i - 1] + y3[i - 1]));
             }
             dataGridView1.Rows.Add(450);
